@@ -1,17 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <style>
-    body{
-         background-color: black;  /* Correct */
-        color:white;
-        text-align:center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* Body styling */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #3b3b3b); /* Gradient background */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 700px;
+        }
+
+        /* List styling */
+        ul {
+            list-style-type: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Link styling */
+        a {
+            color: #00c6ff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff8c00;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            ul li {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul li {
+                font-size: 14px;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-<h1>Hello About!</h1>
+<h1>About This Web Server</h1>
+<p>This web server is built using Java and supports multiple features for handling HTTP requests. It is designed to
+    handle a variety of static and dynamic content, providing responses to users based on different methods like GET and
+    POST.</p>
+
+<p>Key Features of This Web Server:</p>
+<ul>
+    <li><strong>GET Requests:</strong> Handles standard GET requests to serve static HTML files such as
+        <code>index.html</code>, <code>about.html</code>, and <code>contact.html</code>.
+    </li>
+    <li><strong>POST Requests:</strong> Capable of processing POST requests, including handling form submissions and
+        extracting parameters like name or message from user inputs.
+    </li>
+    <li><strong>Thread Pool for Scalability:</strong> Uses a thread pool with a maximum of 100 concurrent threads, which
+        allows the server to handle multiple requests from up to thousands of users efficiently.
+    </li>
+    <li><strong>Simple Routing:</strong> Handles basic routing, redirecting users to the appropriate HTML files based on
+        URL paths like <code>/about</code> and <code>/contact</code>.
+    </li>
+    <li><strong>File Serving:</strong> It serves files with the appropriate content types, such as HTML, CSS, and text
+        files, using the <code>Files.probeContentType()</code> method.
+    </li>
+    <li><strong>HTTP Response Handling:</strong> Provides detailed HTTP response headers (including status codes like
+        200, 404) for both file serving and form responses.
+    </li>
+    <li><strong>Efficient Resource Management:</strong> Closes resources (like sockets and streams) after handling
+        requests, ensuring no unnecessary memory consumption.
+    </li>
+    <li><strong>Responsive Design:</strong> The front-end HTML pages are designed to be responsive and will look good on
+        both desktop and mobile devices.
+    </li>
+</ul>
+
+<p>This server demonstrates how basic web servers are built and can be expanded with additional features like user
+    authentication, advanced routing, or integration with databases. It can easily be extended to meet specific
+    needs.</p>
+
+<div>
+    <a href="/">Go Back to Home</a>
+</div>
 </body>
 </html>

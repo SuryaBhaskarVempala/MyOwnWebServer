@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: java-web-server
+    env: docker
+    plan: free
+    repo: https://github.com/SuryaBhaskarVempala/MyOwnWebServer
+    rootDir: /
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: "8020"
